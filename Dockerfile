@@ -1,4 +1,4 @@
-FROM golang:alpine as golang
+FROM golang:latest as golang
 
 COPY kaniko-0.19.0.tar.gz /tmp/kaniko.tar.gz
 
