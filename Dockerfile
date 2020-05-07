@@ -1,6 +1,6 @@
 FROM golang:latest as golang
 
-COPY kaniko-0.19.0.tar.gz /tmp/kaniko.tar.gz
+COPY kaniko-0.20.0.tar.gz /tmp/kaniko.tar.gz
 
 WORKDIR /go/src/github.com/GoogleContainerTools
 
