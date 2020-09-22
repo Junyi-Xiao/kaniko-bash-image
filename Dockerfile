@@ -1,10 +1,9 @@
 FROM golang:latest as golang
 
-COPY kaniko-0.24.0.tar.gz /tmp/kaniko.tar.gz
-
 WORKDIR /go/src/github.com/GoogleContainerTools
 
 RUN mkdir kaniko \
+    && wget -O /tmp/kaniko.tar.gz https://github.com/GoogleContainerTools/kaniko/archive/v1.0.0.tar.gz \
     && tar -xvf /tmp/kaniko.tar.gz -C ./kaniko --strip-components 1 \
     && cd kaniko && make GOARCH=amd64
 
